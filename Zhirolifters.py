@@ -5,11 +5,11 @@ from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
+from shared.config import TELEGRAM_BOT_TOKEN
 
 # Загружаем переменные окружения
 load_dotenv()
-TOKEN = ("")
-
+TOKEN = TELEGRAM_BOT_TOKEN
 if not TOKEN:
     raise ValueError("TOKEN не найден! Проверь .env файл")
 
